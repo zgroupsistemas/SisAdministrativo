@@ -1,0 +1,56 @@
+.login{
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+}
+.login .icon{
+  font-size: 50px;
+text-align: center;
+}
+
+
+
+/* .content .icon-table {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  transition-delay: 0.2s;
+}
+.content .icon-table:hover{
+cursor: pointer;
+background-color: black;
+color: white;
+animation: 0.3s all ease;
+}
+
+.icon-table i, .icon-table-success i {
+  font-size: 18px;
+}
+
+.content .icon-table-success {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition-property: all;
+  transition-duration: 0.8s;
+  transition-timing-function: ease;
+  transition-delay: 0.2s;
+}
+
+.content .icon-table-success:hover{
+  cursor: pointer;
+  background-color: green;
+  color: white;
+  animation: 0.3s all ease;
+  }
+
+  */
