@@ -2,426 +2,904 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/@adminkit/core@latest/dist/css/app.css">
-    <script src="https://unpkg.com/@adminkit/core@latest/dist/js/app.js"></script>
-    <link rel="stylesheet" href="Assets/css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Sistema Administrativo</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/Assets/plugins/fontawesome-free/css/all.min.css">
+
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="/Assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/Assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/Assets/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="/Assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+  
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-        <nav id="sidebar" class="sidebar js-sidebar">
-            <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" href="index.html">
-                    <span class="align-middle">AdminKit</span>
-                </a>
 
-                <ul class="sidebar-nav">
-                    <li class="sidebar-header">
-                        Pages
-                    </li>
+        <!-- Preloader -->
+        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div> -->
 
-                    <li class="sidebar-item active">
-                        <a class="sidebar-link" href="index.html">
-                            <i class="align-middle" data-feather="sliders"></i> <span
-                                class="align-middle">Dashboard</span>
-                        </a>
-                    </li>
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="pages-profile.html">
-                            <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-                        </a>
-                    </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Aprobar</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Receta</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Insumos</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Categorias</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="#" class="nav-link">Asignacion</a>
+                </li>
+            </ul>
 
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="pages-sign-in.html">
-                            <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="pages-sign-up.html">
-                            <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign
-                                Up</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="pages-blank.html">
-                            <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-header">
-                        Tools & Components
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-buttons.html">
-                            <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-forms.html">
-                            <i class="align-middle" data-feather="check-square"></i> <span
-                                class="align-middle">Forms</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-cards.html">
-                            <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-typography.html">
-                            <i class="align-middle" data-feather="align-left"></i> <span
-                                class="align-middle">Typography</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="icons-feather.html">
-                            <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-header">
-                        Plugins & Addons
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="charts-chartjs.html">
-                            <i class="align-middle" data-feather="bar-chart-2"></i> <span
-                                class="align-middle">Charts</span>
-                        </a>
-                    </li>
-
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="maps-google.html">
-                            <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="sidebar-cta">
-                    <div class="sidebar-cta-content">
-                        <strong class="d-inline-block mb-2">Upgrade to Pro</strong>
-                        <div class="mb-3 text-sm">
-                            Are you looking for more components? Check out our premium version.
-                        </div>
-                        <div class="d-grid">
-                            <a href="upgrade-to-pro.html" class="btn btn-primary">Upgrade to Pro</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="main">
-            <nav class="navbar navbar-expand navbar-light navbar-bg">
-                <div class="col">
-                    <a class="sidebar-toggle js-sidebar-toggle">
-                        <i class="hamburger align-self-center"></i>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                        <i class="fas fa-expand-arrows-alt"></i>
                     </a>
-                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#"
+                        role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
 
-                <div class="col">
-                    <ul class="navbar-nav d-none d-lg-flex">
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index3.html" class="brand-link">
+                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            </a>
 
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Aprobar
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-home align-middle me-1">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                    </svg>
-                                    Listar</a>
-                                <a class="dropdown-item" href="https://adminkit.io/docs/"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-book-open align-middle me-1">
-                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                    </svg>
-                                    Historia</a>
-
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Receta
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                                <a class="dropdown-item" href="Receta.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-home align-middle me-1">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                    </svg>
-                                    Agregar</a>
-                                <a class="dropdown-item" href="Lista-Receta.html"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-book-open align-middle me-1">
-                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                    </svg>
-                                    Listar</a>
-
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Insumos
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                                <a class="dropdown-item" href="Insumos.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-home align-middle me-1">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                    </svg>
-                                    Agregar</a>
-                                <a class="dropdown-item" href="Listar-Insumos.html"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-book-open align-middle me-1">
-                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                    </svg>
-                                    Listar</a>
-
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Categorias
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                                <a class="dropdown-item" href="Categoria.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-home align-middle me-1">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                    </svg>
-                                    Agregar</a>
-                                <a class="dropdown-item" href="Listar-Categoria.html"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-book-open align-middle me-1">
-                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                    </svg>
-                                    Listar</a>
-
-                            </div>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Asignacion
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="resourcesDropdown">
-                                <a class="dropdown-item" href="Asignacion.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-home align-middle me-1">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                    </svg>
-                                    Agregar</a>
-                                <a class="dropdown-item" href=""><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" class="feather feather-book-open align-middle me-1">
-                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                                    </svg>
-                                    Listar</a>
-
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="navbar-collapse collapse col">
-                    <ul class="navbar-nav navbar-align">
-                        <li class="nav-item dropdown">
-                            <a class="nav-icon pe-md-0 dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                                <img src="../../Assets/img/avatar.jpg" class="avatar" style="border-radius: 50%;"
-                                    alt="Charles Hall">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                                <a class="dropdown-item" href="/pages-profile"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-user align-middle me-1">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
-                                    </svg> Profile</a>
-                                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-pie-chart align-middle me-1">
-                                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-                                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-                                    </svg> Analytics</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/pages-settings"><svg xmlns="http://www.w3.org/2000/svg"
-                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-settings align-middle me-1">
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                        <path
-                                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-                                        </path>
-                                    </svg> Settings &amp;
-                                    Privacy</a>
-                                <a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-help-circle align-middle me-1">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                    </svg> Help Center</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Log out</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-            <main class="content">
-                <div class="container-fluid p-0">
-                    <div class="row">
-                        <div class="col-12 ">
-                            <div class="card">
-                                <div class="card-header" style="background-color: black;">
-                                    <h2 style="color: white;text-align: center;">AGREGAR INSUMO</h2>
-                                </div>
-                                <div class="card-body">
-                                    <form class="" style="text-align: center;">
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Codigo Insumo :</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Ingresar Codigo" style="width: 80%;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Nombre Insumo:</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <div class="mb-3">
-                                                    <input type="text" class="form-control"
-                                                        placeholder="Ingresar Nombre" style="width: 80%;">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-5">
-                                                <div class="mb-3">
-                                                    <label class="form-label">Categoria :</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-5">
-                                                <select class="form-select" aria-label="Default select example" style="width: 80%;">
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
-                                                    <option value="3">Three</option>
-                                                  </select>
-                                                  
-                                            </div>
-                                            <div class="col-2">
-                                                <div class="mb-3">
-                                                     <button type="submit"
-                                                        class="btn btn-success"><i class="fa-solid fa-plus"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-6 d-flex justify-content-evenly "> <button type="submit"
-                                                    class="btn btn-dark">Cerrar</button></div>
-                                            <div class="col-6 d-flex justify-content-evenly"> <button type="submit"
-                                                    class="btn btn-dark">Agregar</button></div>
-                                        </div>
-
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
-
+                    <div class="info">
+                        <a href="#" class="d-block">Alexander Pierce</a>
+                    </div>
                 </div>
-            </main>
 
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
-                            <p class="mb-0">
-                                <a class="text-muted" href="https://adminkit.io/"
-                                    ><strong>AdminKit</strong></a> - <a class="text-muted"
-                                    href="https://adminkit.io/" ><strong>Bootstrap Admin
-                                        Template</strong></a> &copy;
-                            </p>
+                <!-- SidebarSearch Form -->
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
                         </div>
-                        <div class="col-6 text-end">
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <a class="text-muted" href="https://adminkit.io/" >Support</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./index.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard v1</p>
+                                    </a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a class="text-muted" href="https://adminkit.io/" >Help Center</a>
+                                <li class="nav-item">
+                                    <a href="./index2.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard v2</p>
+                                    </a>
                                 </li>
-                                <li class="list-inline-item">
-                                    <a class="text-muted" href="https://adminkit.io/" >Privacy</a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="text-muted" href="https://adminkit.io/" >Terms</a>
+                                <li class="nav-item">
+                                    <a href="./index3.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard v3</p>
+                                    </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/widgets.html" class="nav-link">
+                                <i class="nav-icon fas fa-th"></i>
+                                <p>
+                                    Widgets
+                                    <span class="right badge badge-danger">New</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Layout Options
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right">6</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Top Navigation</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Top Navigation + Sidebar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/boxed.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Boxed</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Sidebar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Sidebar <small>+ Custom Area</small></p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-topnav.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Navbar</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/fixed-footer.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Fixed Footer</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Collapsed Sidebar</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-chart-pie"></i>
+                                <p>
+                                    Charts
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/charts/chartjs.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>ChartJS</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/flot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Flot</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/inline.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inline</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/charts/uplot.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>uPlot</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-tree"></i>
+                                <p>
+                                    UI Elements
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/UI/general.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>General</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/icons.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Icons</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/buttons.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Buttons</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/sliders.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Sliders</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/modals.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Modals & Alerts</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/navbar.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Navbar & Tabs</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/timeline.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Timeline</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/UI/ribbons.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Ribbons</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <p>
+                                    Forms
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/forms/general.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>General Elements</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/forms/advanced.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Advanced Elements</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/forms/editors.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Editors</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/forms/validation.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Validation</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Tables
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/tables/simple.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Simple Tables</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/tables/data.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>DataTables</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/tables/jsgrid.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>jsGrid</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header">EXAMPLES</li>
+                        <li class="nav-item">
+                            <a href="pages/calendar.html" class="nav-link">
+                                <i class="nav-icon far fa-calendar-alt"></i>
+                                <p>
+                                    Calendar
+                                    <span class="badge badge-info right">2</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/gallery.html" class="nav-link">
+                                <i class="nav-icon far fa-image"></i>
+                                <p>
+                                    Gallery
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/kanban.html" class="nav-link">
+                                <i class="nav-icon fas fa-columns"></i>
+                                <p>
+                                    Kanban Board
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-envelope"></i>
+                                <p>
+                                    Mailbox
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/mailbox/mailbox.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Inbox</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/mailbox/compose.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Compose</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Read</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-book"></i>
+                                <p>
+                                    Pages
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/examples/invoice.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Invoice</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/profile.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Profile</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/e-commerce.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>E-commerce</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/projects.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Projects</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/project-add.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Project Add</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/project-edit.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Project Edit</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/project-detail.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Project Detail</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/contacts.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Contacts</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/faq.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>FAQ</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/contact-us.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Contact us</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-plus-square"></i>
+                                <p>
+                                    Extras
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Login & Register v1
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="pages/examples/login.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Login v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/register.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/forgot-password.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Forgot Password v1</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/recover-password.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Recover Password v1</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Login & Register v2
+                                            <i class="fas fa-angle-left right"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="pages/examples/login-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Login v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/register-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Register v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/forgot-password-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Forgot Password v2</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="pages/examples/recover-password-v2.html" class="nav-link">
+                                                <i class="far fa-circle nav-icon"></i>
+                                                <p>Recover Password v2</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/lockscreen.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Lockscreen</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/legacy-user-menu.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Legacy User Menu</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/language-menu.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Language Menu</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/404.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Error 404</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/500.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Error 500</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/pace.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Pace</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/examples/blank.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Blank Page</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="starter.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Starter Page</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-search"></i>
+                                <p>
+                                    Search
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="pages/search/simple.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Simple Search</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="pages/search/enhanced.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Enhanced</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header">MISCELLANEOUS</li>
+                        <li class="nav-item">
+                            <a href="iframe.html" class="nav-link">
+                                <i class="nav-icon fas fa-ellipsis-h"></i>
+                                <p>Tabbed IFrame Plugin</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
+                                <p>Documentation</p>
+                            </a>
+                        </li>
+                        <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle nav-icon"></i>
+                                <p>Level 1</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <p>
+                                    Level 1
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>
+                                            Level 2
+                                            <i class="right fas fa-angle-left"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Level 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Level 3</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <i class="far fa-dot-circle nav-icon"></i>
+                                                <p>Level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-circle nav-icon"></i>
+                                <p>Level 1</p>
+                            </a>
+                        </li>
+                        <li class="nav-header">LABELS</li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-danger"></i>
+                                <p class="text">Important</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-warning"></i>
+                                <p>Warning</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon far fa-circle text-info"></i>
+                                <p>Informational</p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1></h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                                <li class="breadcrumb-item active">Receta</li>
+                            </ol>
                         </div>
                     </div>
-                </div>
-            </footer>
-        </div>
-    </div>
+                </div><!-- /.container-fluid -->
+            </section>
 
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid" style="display: flex;justify-content: center;">
+
+                    <!-- left column -->
+
+                    <div class="card card-dark" style="width: 80%;">
+                        <div class="card-header">
+                            <h3 class="card-title">Agregar Insumo</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form>
+                            <div class="card-body">
+                                <div class="row" style="align-items: center; text-align: center;">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Codigo Insumo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control"  type="text" class="form-control" style="width: 70%;"
+
+                                                placeholder="Ingresar Codigo">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="align-items: center; text-align: center;">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Nombre Insumo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" type="text" class="form-control" style="width: 70%;"
+
+                                                placeholder="Ingresar Nombre">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="align-items: center; text-align: center;">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Categorias</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" style="width: 70%;"
+                                                placeholder="Ingresar Descripcion">
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-success"data-toggle="modal" data-target="#modaleditar"><i class="fa-solid fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.card-body -->
+
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-6" style="display: flex; justify-content: center;"> 
+                                        <button type="submit" class="btn btn-default">Cerrar</button>
+                                    </div>
+                                    <div class="col-6" > 
+                                        <button type="submit" class="btn btn-dark">Agregar</button>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </form>
+
+
+
+
+
+
+                    </div>
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.2.0
+            </div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="/Assets/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="/Assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="/Assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Assets/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="/Assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="/Assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="/Assets/dist/js/adminlte.js"></script>
+
+ 
 </body>
 
 </html>
+
